@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammed Fasal | Security Projects & Writeups</title>
+  <meta name="description" content="Security writeups and practical cybersecurity projects by Muhammed Fasal across penetration testing, machine learning, tools, and automation." />
+  <meta property="og:title" content="Cybersecurity Projects - Muhammed Fasal" />
+  <meta property="og:description" content="Interactive security project cards with tools, tags, and detailed previews." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Muhammed Fasal Security Writeups",
+    "author": "Muhammed Fasal",
+    "about": "Cybersecurity projects and vulnerability research"
+  }
+  </script>
+</head>
+<body data-page="writeups">
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">MF_SEC</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="writeups.html">Projects</a></li>
+        <li><a href="game.html">Quiz</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-btn" class="nav-btn" aria-label="Toggle theme">T</button>
+        <button id="menuToggle" class="mobile-menu-toggle" aria-label="Open menu">M</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="terminal reveal">
+      <div class="terminal-head">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+      </div>
+      <h1 class="section-title">Security Projects and Writeups</h1>
+      <div class="terminal-body">
+        <p>&gt; Curated offensive security projects with real-world methodology and remediation insight.</p>
+        <p>&gt; Focus areas: web exploitation, CTF design, risk tracking, and automation.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="section-title">Project Categories</h2>
+      <div class="projects-toolbar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pentest">Penetration Testing</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="tools">Security Tools</button>
+        <button class="filter-btn" data-filter="automation">Automation</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card card" data-project-category="pentest">
+          <h3>Hospital Management System Pentest</h3>
+          <p>Comprehensive offensive assessment that identified 23 vulnerabilities across authentication, authorization, and input handling.</p>
+          <div class="project-tags">
+            <span>Critical</span><span>IDOR</span><span>XSS</span><span>Business Logic</span>
+          </div>
+          <p class="tools">Tools: Burp Suite, Manual Testing, CVSS, OWASP Top 10</p>
+          <button class="btn" data-modal-title="Hospital Management Pentest" data-modal-body="Full pentest covered admin, doctor, and patient modules with proof-of-concept exploit paths and remediation matrix.">Open Preview</button>
+        </article>
+
+        <article class="project-card card" data-project-category="ml">
+          <h3>Weather Prediction (ML)</h3>
+          <p>Machine learning web app that predicts rainfall using ten years of historical data with structured preprocessing and model validation.</p>
+          <div class="project-tags">
+            <span>Classification</span><span>Flask</span><span>Data Pipeline</span>
+          </div>
+          <p class="tools">Tools: Python, Pandas, NumPy, Scikit-learn, Flask</p>
+          <button class="btn" data-modal-title="Weather Prediction System" data-modal-body="Used supervised ML flow with feature engineering, train/test split, model evaluation, and web interface integration.">Open Preview</button>
+        </article>
+
+        <article class="project-card card" data-project-category="tools">
+          <h3>Privilege Escalation CTF Machine</h3>
+          <p>Self-created Linux CTF with realistic post-exploitation vectors designed for escalating from user to root in controlled lab conditions.</p>
+          <div class="project-tags">
+            <span>SUID</span><span>Capabilities</span><span>Cron Abuse</span><span>GTFOBins</span>
+          </div>
+          <p class="tools">Tools: Linux, Bash, systemd, Cron, Enumeration Playbooks</p>
+          <button class="btn" data-modal-title="Custom PrivEsc CTF" data-modal-body="Built multiple escalation paths including NOPASSWD abuse, writable services, wildcard injection, and capability misuse.">Open Preview</button>
+        </article>
+
+        <article class="project-card card" data-project-category="automation">
+          <h3>Security Assessment Tracker</h3>
+          <p>Structured vulnerability management tracker designed for prioritization, reporting consistency, and remediation monitoring.</p>
+          <div class="project-tags">
+            <span>Risk Tracking</span><span>Reporting</span><span>Workflow</span>
+          </div>
+          <p class="tools">Tools: Excel/Sheets, CVSS, Risk Matrix</p>
+          <button class="btn" data-modal-title="Vulnerability Tracking System" data-modal-body="Captures affected module, severity, impact, remediation plan, and status to improve cross-team security operations.">Open Preview</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="globalModal" aria-hidden="true">
+    <div class="modal-card glass">
+      <button class="modal-close" type="button">Close</button>
+      <h3 id="modalTitle"></h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <section class="chatbot" aria-label="AI chatbot">
+    <div class="chat-window glass">
+      <div class="chat-head">
+        <strong>AI Security Assistant</strong>
+        <button class="close-chat" type="button" aria-label="Close chatbot">x</button>
+      </div>
+      <div class="chat-body"></div>
+      <form class="chat-form">
+        <label for="chatInput" class="sr-only">Ask a question</label>
+        <input id="chatInput" type="text" placeholder="Ask about profile, services, projects..." />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <button class="chat-toggle" type="button" aria-label="Open AI chatbot">AI</button>
+  </section>
+
+  <footer class="site-footer">
+    <p>(c) 2026 Muhammed Fasal | Cybersecurity Researcher</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+
+
+
+
