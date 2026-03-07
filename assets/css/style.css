@@ -776,3 +776,10 @@ section {
 
 
 
+
+.terminal-nav-shell { margin-top: 2rem; }
+.terminal-nav { padding: 0.8rem; background: rgba(0,0,0,0.82); border: 1px solid rgba(0,255,159,0.35); }
+.terminal-output { min-height: 180px; max-height: 220px; overflow: auto; font-family: 'JetBrains Mono', monospace; color: #8fffcc; display: grid; gap: 0.35rem; }
+.terminal-input-row { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; color: #00ff9f; font-family: 'JetBrains Mono', monospace; }
+.terminal-input-row input { flex: 1; background: #01050a; border: 1px solid rgba(0,255,159,0.35); color: #9fffcd; border-radius: 8px; padding: 0.45rem; font-family: 'JetBrains Mono', monospace; }
+
