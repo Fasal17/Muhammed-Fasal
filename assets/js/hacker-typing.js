@@ -23,6 +23,8 @@
     '[OK] IDOR: Not detected',
     '',
     'System secure.'
+    '',
+    'Use Desktop Site.'
   ];
 
   wrap.classList.add('active');
