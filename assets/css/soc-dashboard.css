@@ -20,7 +20,7 @@
 
 .stat-tile p {
   margin: 0;
-  color: #9ab0c0;
+  color: #ffffff;
 }
 
 .stat-tile strong {
@@ -79,3 +79,4 @@
     grid-template-columns: 1fr;
   }
 }
+

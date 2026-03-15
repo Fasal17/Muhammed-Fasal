@@ -4,8 +4,8 @@
   --panel: rgba(16, 24, 38, 0.6);
   --panel-strong: rgba(11, 15, 20, 0.85);
   --line: rgba(0, 217, 255, 0.2);
-  --text: #e6f7ff;
-  --muted: #92a9b8;
+  --text: #ffffff;
+  --muted: #ffffff;
   --primary: #00ff9f;
   --accent: #00d9ff;
   --warning: #ff0055;
@@ -25,7 +25,7 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  color: var(--text);
+  color: #ffffff;
   background: radial-gradient(circle at 20% 10%, #0f1e30 0%, var(--bg) 35%, #070a0f 100%);
   min-height: 100vh;
   overflow-x: hidden;
@@ -58,7 +58,19 @@ body::after {
 }
 
 a {
-  color: inherit;
+  color: #00d9ff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+p {
+  color: #ffffff;
+}
+
+span, label, li, strong {
+  color: #ffffff;
 }
 
 .site-header {
@@ -116,7 +128,7 @@ a {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--text);
+  color: #ffffff;
 }
 
 .nav-links a:hover::after,
@@ -135,7 +147,7 @@ a {
 .close-chat {
   border: 1px solid var(--line);
   background: var(--panel);
-  color: var(--text);
+  color: #ffffff;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -183,6 +195,30 @@ section {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1.1fr 0.9fr;
+  background-image: none;
+  background: #0b0f14;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-copy,
+.hero-visual,
+.floating-icons {
+  position: relative;
+  z-index: 1;
+}
+.hero-panel,
+.hero-bg {
+  background-image: none;
+  background: #0b0f14;
 }
 
 #cyberScene {
@@ -229,7 +265,7 @@ section {
 .btn {
   border: 1px solid var(--line);
   background: transparent;
-  color: var(--text);
+  color: #ffffff;
   border-radius: 12px;
   padding: 0.75rem 1rem;
   text-decoration: none;
@@ -261,6 +297,13 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 18px;
+  object-fit: cover;
+}
+
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -404,7 +447,7 @@ section {
 
 .filter-btn.active {
   background: rgba(0, 217, 255, 0.16);
-  color: var(--text);
+  color: #ffffff;
 }
 
 .projects-grid {
@@ -538,7 +581,7 @@ section {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--panel-strong);
-  color: var(--text);
+  color: #ffffff;
   padding: 0.8rem;
 }
 
@@ -565,7 +608,7 @@ section {
   border: 1px solid var(--line);
   background: rgba(0, 217, 255, 0.2);
   box-shadow: 0 0 20px rgba(0, 217, 255, 0.45);
-  color: var(--text);
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -617,7 +660,7 @@ section {
 .chat-form input {
   flex: 1;
   background: rgba(4, 8, 14, 0.8);
-  color: var(--text);
+  color: #ffffff;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 0.55rem;
@@ -626,7 +669,7 @@ section {
 .chat-form button {
   border: 1px solid var(--line);
   background: rgba(0, 217, 255, 0.2);
-  color: var(--text);
+  color: #ffffff;
   border-radius: 8px;
   padding: 0.55rem 0.8rem;
 }
@@ -656,7 +699,7 @@ section {
   float: right;
   border: 1px solid var(--line);
   background: transparent;
-  color: var(--text);
+  color: #ffffff;
   border-radius: 8px;
 }
 
@@ -782,4 +825,17 @@ section {
 .terminal-output { min-height: 180px; max-height: 220px; overflow: auto; font-family: 'JetBrains Mono', monospace; color: #8fffcc; display: grid; gap: 0.35rem; }
 .terminal-input-row { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; color: #00ff9f; font-family: 'JetBrains Mono', monospace; }
 .terminal-input-row input { flex: 1; background: #01050a; border: 1px solid rgba(0,255,159,0.35); color: #9fffcd; border-radius: 8px; padding: 0.45rem; font-family: 'JetBrains Mono', monospace; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
