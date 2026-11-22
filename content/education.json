@@ -1,0 +1,8 @@
+{
+  "published": true,
+  "sectionIndex": "07 / EDUCATION",
+  "heading": "Academic foundation",
+  "items": [
+    { "id": "bca", "institution": "University of Mysore", "qualification": "Bachelor of Computer Applications (BCA)", "fieldOfStudy": "Computer Applications", "startDate": "2022", "endDate": "2025", "description": "Coursework and project work established a foundation in programming, web technologies, data handling, and cybersecurity concepts.", "institutionLogo": "", "sortOrder": 1, "published": true }
+  ]
+}

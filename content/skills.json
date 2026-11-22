@@ -1,0 +1,13 @@
+{
+  "published": true,
+  "sectionIndex": "03 / SKILLS",
+  "heading": "Security capabilities and tooling",
+  "description": "Tools and methods I use in projects, labs, and structured security work.",
+  "categories": [
+    { "id": "offensive-security", "name": "Offensive security", "items": ["Vulnerability assessment", "Web application penetration testing", "OWASP Top 10 testing", "Authentication & authorization testing", "Vulnerability validation & reporting"], "sortOrder": 1, "published": true },
+    { "id": "tools", "name": "Tools", "items": ["Burp Suite · Nmap · Wireshark", "Metasploit · WhatWeb · SSLScan", "Kali Linux · Curl · OpenSSL", "Browser developer tools"], "sortOrder": 2, "published": true },
+    { "id": "systems-automation", "name": "Systems & automation", "items": ["TCP/IP · HTTP/HTTPS · DNS", "Linux · Windows · basic IT administration", "Python · Bash · HTML · CSS · JavaScript", "Flask · Pandas · NumPy · Scikit-learn"], "sortOrder": 3, "published": true }
+  ],
+  "methodologyLabel": "VAPT methodology",
+  "methodology": ["Reconnaissance", "Application mapping", "Attack-surface review", "Manual validation", "Risk classification", "Reporting & remediation"]
+}

@@ -1,0 +1,338 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+# GitHub Pages project site. Sign in with a GitHub fine-grained PAT at the CMS screen.
+backend:
+  name: github
+  repo: Fasal17/Muhammed-Fasal
+  branch: main
+
+site_url: https://fasal17.github.io/Muhammed-Fasal/
+display_url: https://fasal17.github.io/Muhammed-Fasal/
+media_folder: /assets/uploads/images
+public_folder: /Muhammed-Fasal/assets/uploads/images
+media_libraries:
+  default:
+    config:
+      max_file_size: 10485760
+      slugify_filename: true
+
+collections:
+  - name: site_settings
+    label: Site Settings
+    icon: settings
+    format: json
+    files:
+      - name: site
+        label: Site Settings
+        file: content/site.json
+        fields:
+          - { name: title, label: Website title, widget: string }
+          - { name: description, label: Website description, widget: text }
+          - { name: language, label: Website language, widget: string, default: en }
+          - { name: brandInitials, label: Brand initials, widget: string, minlength: 1, maxlength: 4 }
+          - { name: copyrightName, label: Copyright name, widget: string }
+          - { name: footerText, label: Footer link text, widget: string }
+          - name: navigation
+            label: Main navigation
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: target, label: 'Section ID (without #)', widget: string, pattern: ['^[A-Za-z0-9-]+$', 'Use letters, numbers, and hyphens only.'] }
+              - { name: published, label: Show link, widget: boolean, default: true, required: false }
+
+  - name: profile
+    label: Profile
+    icon: person
+    format: json
+    files:
+      - name: profile
+        label: Profile and hero
+        file: content/profile.json
+        fields:
+          - { name: fullName, label: Full name, widget: string }
+          - { name: designation, label: Professional designation, widget: string }
+          - { name: heroTitlePrefix, label: Hero title first word(s), widget: string }
+          - { name: heroTitleAccent, label: Hero title accent word(s), widget: string }
+          - { name: heroSubtitle, label: Hero subtitle, widget: string }
+          - { name: shortDescription, label: Hero description, widget: text }
+          - { name: profileImage, label: Profile / hero image, widget: image, media_folder: /assets/uploads/profile, public_folder: /Muhammed-Fasal/assets/uploads/profile, accept: 'image/jpeg,image/png,image/webp' }
+          - { name: profileImageAlt, label: Profile image alternative text, widget: string }
+          - { name: location, label: Location, widget: string }
+          - { name: availability, label: Availability status, widget: string }
+          - { name: professionalHeadline, label: Professional headline, widget: string }
+          - { name: tools, label: Tool strip, widget: list, field: { name: tool, label: Tool, widget: string } }
+          - name: socialLinks
+            label: Hero social links
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: URL, widget: string, type: url }
+              - { name: published, label: Show link, widget: boolean, default: true, required: false }
+
+  - name: about
+    label: About Me
+    icon: info
+    format: json
+    files:
+      - name: about
+        label: About Me
+        file: content/about.json
+        fields:
+          - { name: published, label: Show section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: paragraphs, label: Biography paragraphs, widget: list, field: { name: paragraph, label: Paragraph, widget: text } }
+          - { name: contactLinkText, label: Contact link text, widget: string }
+
+  - name: experience
+    label: Experience
+    icon: work
+    format: json
+    files:
+      - name: experience
+        label: Work experience
+        file: content/experience.json
+        fields:
+          - { name: published, label: Show section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: description, label: Introductory description, widget: text }
+          - name: items
+            label: Experience entries
+            widget: list
+            fields:
+              - { name: id, label: Unique ID, widget: string, pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens.'] }
+              - { name: company, label: Company, widget: string }
+              - { name: jobTitle, label: Job title, widget: string }
+              - { name: employmentType, label: Employment type, widget: string, required: false }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: startDate, label: Start date, widget: string }
+              - { name: endDate, label: End date, widget: string, required: false }
+              - { name: current, label: Currently working here, widget: boolean, default: false, required: false }
+              - { name: companyLogo, label: Company logo, widget: image, required: false, media_folder: /assets/uploads/images, public_folder: /Muhammed-Fasal/assets/uploads/images, accept: 'image/jpeg,image/png,image/webp' }
+              - { name: description, label: Description, widget: text, required: false }
+              - { name: responsibilities, label: Responsibilities, widget: list, required: false, field: { name: responsibility, label: Responsibility, widget: text } }
+              - { name: technologies, label: Technologies, widget: list, required: false, field: { name: technology, label: Technology, widget: string } }
+              - { name: sortOrder, label: Display order, widget: number, value_type: int, min: 1 }
+              - { name: published, label: Show entry, widget: boolean, default: true, required: false }
+
+  - name: projects
+    label: Projects
+    icon: account_tree
+    format: json
+    files:
+      - name: projects
+        label: Projects and filters
+        file: content/projects.json
+        fields:
+          - { name: published, label: Show section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: description, label: Introductory description, widget: text }
+          - name: categories
+            label: Project filters
+            widget: list
+            fields:
+              - { name: id, label: Filter ID, widget: string, pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens.'] }
+              - { name: label, label: Filter label, widget: string }
+          - name: items
+            label: Projects
+            widget: list
+            fields:
+              - { name: id, label: Unique project ID, widget: string, pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens.'] }
+              - { name: title, label: Project title, widget: string }
+              - { name: category, label: Filter category ID, widget: string, hint: 'Use one of the IDs configured in Project filters.' }
+              - { name: categoryLabel, label: Card category label, widget: string }
+              - { name: shortDescription, label: Short description, widget: text }
+              - { name: fullDescription, label: Full description, widget: text, required: false }
+              - { name: image, label: Project image, widget: image, required: false, media_folder: /assets/uploads/projects, public_folder: /Muhammed-Fasal/assets/uploads/projects, accept: 'image/jpeg,image/png,image/webp' }
+              - { name: additionalImages, label: Additional images, widget: image, required: false, multiple: true, media_folder: /assets/uploads/projects, public_folder: /Muhammed-Fasal/assets/uploads/projects, accept: 'image/jpeg,image/png,image/webp' }
+              - { name: technologies, label: Technologies, widget: list, field: { name: technology, label: Technology, widget: string } }
+              - { name: githubUrl, label: GitHub URL, widget: string, type: url, required: false }
+              - { name: liveUrl, label: Live demo URL or relative path, widget: string, required: false }
+              - { name: documentationUrl, label: Documentation URL, widget: string, type: url, required: false }
+              - { name: featured, label: Featured project, widget: boolean, default: false, required: false }
+              - { name: sortOrder, label: Display order, widget: number, value_type: int, min: 1 }
+              - { name: published, label: Show project, widget: boolean, default: true, required: false }
+              - { name: createdDate, label: Creation date, widget: string, required: false }
+              - name: caseStudy
+                label: Case study dialog
+                widget: object
+                required: false
+                fields:
+                  - { name: environment, label: Environment, widget: text, required: false }
+                  - { name: objective, label: Objective, widget: text, required: false }
+                  - { name: approach, label: Approach, widget: text, required: false }
+                  - { name: features, label: Features or learning areas, widget: list, required: false, field: { name: feature, label: Feature, widget: text } }
+                  - { name: implementation, label: Implementation, widget: text, required: false }
+                  - { name: outcome, label: Outcome, widget: text, required: false }
+                  - { name: lessonsLearned, label: Lessons learned, widget: text, required: false }
+
+  - name: skills
+    label: Skills
+    icon: psychology
+    format: json
+    files:
+      - name: skills
+        label: Skills and methodology
+        file: content/skills.json
+        fields:
+          - { name: published, label: Show section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: description, label: Introductory description, widget: text }
+          - name: categories
+            label: Skill categories
+            widget: list
+            fields:
+              - { name: id, label: Unique ID, widget: string, pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens.'] }
+              - { name: name, label: Category name, widget: string }
+              - { name: items, label: Skills, widget: list, field: { name: skill, label: Skill, widget: string } }
+              - { name: sortOrder, label: Display order, widget: number, value_type: int, min: 1 }
+              - { name: published, label: Show category, widget: boolean, default: true, required: false }
+          - { name: methodologyLabel, label: Methodology label, widget: string }
+          - { name: methodology, label: Methodology steps, widget: list, field: { name: step, label: Step, widget: string } }
+
+  - name: certifications
+    label: Certifications
+    icon: workspace_premium
+    format: json
+    files:
+      - name: certifications
+        label: Certifications
+        file: content/certifications.json
+        fields:
+          - { name: published, label: Show section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: description, label: Introductory description, widget: text }
+          - name: items
+            label: Certificates
+            widget: list
+            fields:
+              - { name: id, label: Unique ID, widget: string, pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens.'] }
+              - { name: name, label: Certificate name, widget: string }
+              - { name: issuingOrganization, label: Issuing organization, widget: string }
+              - { name: issueDate, label: Issue date, widget: string, required: false }
+              - { name: expiryDate, label: Expiry date, widget: string, required: false }
+              - { name: credentialId, label: Credential ID, widget: string, required: false }
+              - { name: credentialUrl, label: Credential URL, widget: string, type: url, required: false }
+              - { name: image, label: Certificate image, widget: image, media_folder: /assets/uploads/certifications, public_folder: /Muhammed-Fasal/assets/uploads/certifications, accept: 'image/jpeg,image/png,image/webp' }
+              - { name: description, label: Description, widget: text, required: false }
+              - { name: sortOrder, label: Display order, widget: number, value_type: int, min: 1 }
+              - { name: published, label: Show certificate, widget: boolean, default: true, required: false }
+
+  - name: education
+    label: Education
+    icon: school
+    format: json
+    files:
+      - name: education
+        label: Education
+        file: content/education.json
+        fields:
+          - { name: published, label: Show section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - name: items
+            label: Education entries
+            widget: list
+            fields:
+              - { name: id, label: Unique ID, widget: string, pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens.'] }
+              - { name: institution, label: Institution, widget: string }
+              - { name: qualification, label: Qualification, widget: string }
+              - { name: fieldOfStudy, label: Field of study, widget: string, required: false }
+              - { name: startDate, label: Start date, widget: string }
+              - { name: endDate, label: End date, widget: string, required: false }
+              - { name: description, label: Description, widget: text }
+              - { name: institutionLogo, label: Institution logo, widget: image, required: false, media_folder: /assets/uploads/education, public_folder: /Muhammed-Fasal/assets/uploads/education, accept: 'image/jpeg,image/png,image/webp' }
+              - { name: sortOrder, label: Display order, widget: number, value_type: int, min: 1 }
+              - { name: published, label: Show entry, widget: boolean, default: true, required: false }
+
+  - name: research
+    label: Research and Write-ups
+    icon: science
+    format: json
+    files:
+      - name: research
+        label: Research and write-ups
+        file: content/research.json
+        fields:
+          - { name: published, label: Show section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: paragraphs, label: Research paragraphs, widget: list, field: { name: paragraph, label: Paragraph, widget: text } }
+          - name: platformLinks
+            label: Platform links
+            widget: list
+            fields:
+              - { name: label, label: Link label, widget: string }
+              - { name: url, label: URL, widget: string, type: url }
+              - { name: published, label: Show link, widget: boolean, default: true, required: false }
+          - name: articles
+            label: Research articles
+            widget: list
+            required: false
+            fields:
+              - { name: title, label: Article title, widget: string }
+              - { name: url, label: Article URL, widget: string, type: url }
+              - { name: published, label: Show article, widget: boolean, default: true, required: false }
+
+  - name: resume
+    label: Resume Manager
+    icon: description
+    format: json
+    files:
+      - name: resume
+        label: Resume manager
+        file: content/resume.json
+        fields:
+          - { name: published, label: Show resume section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: title, label: Heading, widget: string }
+          - { name: description, label: Description / empty state, widget: text }
+          - { name: pdfPath, label: Resume PDF, widget: file, required: false, media_folder: /assets/uploads/documents, public_folder: /Muhammed-Fasal/assets/uploads/documents, accept: application/pdf, pattern: ['^(?:|.*[.][pP][dD][fF])$', 'Select a PDF file.'] }
+          - { name: lastUpdated, label: Last updated text, widget: string, required: false }
+          - { name: viewButtonText, label: View button text, widget: string }
+          - { name: downloadButtonText, label: Download button text, widget: string }
+          - { name: downloadFilename, label: Download filename, widget: string, pattern: ['^[A-Za-z0-9._-]+[.][pP][dD][fF]$', 'Use a PDF filename, e.g. muhammed-fasal-resume.pdf.'] }
+
+  - name: contact
+    label: Contact Details
+    icon: contact_mail
+    format: json
+    files:
+      - name: contact
+        label: Contact and social links
+        file: content/contact.json
+        fields:
+          - { name: published, label: Show section, widget: boolean, default: true, required: false }
+          - { name: sectionIndex, label: Section index, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: description, label: Contact description, widget: text }
+          - { name: email, label: Email address, widget: string, type: email }
+          - { name: phone, label: Phone number, widget: string, required: false }
+          - { name: location, label: Location, widget: string, required: false }
+          - { name: availability, label: Availability, widget: string, required: false }
+          - name: socialLinks
+            label: Social and professional links
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: URL, widget: string, type: url }
+              - { name: published, label: Show link, widget: boolean, default: true, required: false }
+
+  - name: seo
+    label: SEO Settings
+    icon: travel_explore
+    format: json
+    files:
+      - name: seo
+        label: SEO and sharing
+        file: content/seo.json
+        fields:
+          - { name: siteTitle, label: Browser title, widget: string }
+          - { name: metaDescription, label: Meta description, widget: text, maxlength: 160 }
+          - { name: openGraphImage, label: Open Graph image, widget: image, media_folder: /assets/uploads/images, public_folder: /Muhammed-Fasal/assets/uploads/images, accept: 'image/jpeg,image/png,image/webp' }
+          - { name: socialTitle, label: Social sharing title, widget: string }
+          - { name: socialDescription, label: Social sharing description, widget: text, maxlength: 200 }
+          - { name: canonicalUrl, label: Canonical URL, widget: string, type: url }

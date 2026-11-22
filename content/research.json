@@ -1,0 +1,11 @@
+{
+  "published": true,
+  "sectionIndex": "05 / RESEARCH",
+  "heading": "Security research & bug bounty",
+  "paragraphs": [
+    "I use responsible disclosure platforms and security labs to strengthen practical testing skills. This work supports an ongoing focus on web application security, evidence-based validation, and clear remediation thinking.",
+    "Public activity is available through my Bugcrowd profile. I do not publish unsupported metrics or sensitive details from security testing."
+  ],
+  "platformLinks": [{ "label": "View Bugcrowd profile", "url": "https://bugcrowd.com/h/Fasal17", "published": true }],
+  "articles": []
+}

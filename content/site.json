@@ -1,0 +1,17 @@
+{
+  "title": "Muhammed Fasal | Cybersecurity & VAPT Portfolio",
+  "description": "Cybersecurity, VAPT, web application security, and security research portfolio.",
+  "language": "en",
+  "brandInitials": "MF",
+  "copyrightName": "Muhammed Fasal",
+  "footerText": "Back to top",
+  "navigation": [
+    { "label": "About", "target": "about", "published": true },
+    { "label": "Experience", "target": "experience", "published": true },
+    { "label": "Skills", "target": "skills", "published": true },
+    { "label": "Projects", "target": "projects", "published": true },
+    { "label": "Research", "target": "research", "published": true },
+    { "label": "Certifications", "target": "certifications", "published": true },
+    { "label": "Contact", "target": "contact", "published": true }
+  ]
+}

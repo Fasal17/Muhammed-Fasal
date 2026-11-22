@@ -1,0 +1,15 @@
+{
+  "published": true,
+  "sectionIndex": "09 / CONTACT",
+  "heading": "Let’s discuss security work.",
+  "description": "Available for cybersecurity, VAPT, penetration testing, web application security, and junior security opportunities.",
+  "email": "fasalmuhammed7025@gmail.com",
+  "phone": "",
+  "location": "Kerala, India",
+  "availability": "Open to cybersecurity opportunities",
+  "socialLinks": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/muhammed-fasal-ms/", "published": true },
+    { "label": "GitHub", "url": "https://github.com/Fasal17", "published": true },
+    { "label": "Bugcrowd", "url": "https://bugcrowd.com/h/Fasal17", "published": true }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "published": true,
+  "sectionIndex": "06 / CERTIFICATIONS",
+  "heading": "Training and credentials",
+  "description": "Certificate images are available for review.",
+  "items": [
+    { "id": "azure-ai", "name": "Azure AI Fundamentals", "issuingOrganization": "Microsoft", "issueDate": "Jun 2024", "expiryDate": "", "credentialId": "", "credentialUrl": "", "image": "assets/images/certs/azure-ai.jpg", "description": "", "sortOrder": 1, "published": true },
+    { "id": "cisco-ccst", "name": "CCST Cybersecurity", "issuingOrganization": "Cisco", "issueDate": "Mar 2024", "expiryDate": "", "credentialId": "", "credentialUrl": "", "image": "assets/images/certs/cisco-ccst.jpg", "description": "", "sortOrder": 2, "published": true },
+    { "id": "cpp", "name": "Certified Pentesting Professional", "issuingOrganization": "Encrypt Bytes", "issueDate": "Oct 2025", "expiryDate": "", "credentialId": "", "credentialUrl": "", "image": "assets/images/certs/CPP.jpg", "description": "", "sortOrder": 3, "published": true },
+    { "id": "junior-pt", "name": "Junior Penetration Tester", "issuingOrganization": "Encrypt Bytes", "issueDate": "Jun 2025", "expiryDate": "", "credentialId": "", "credentialUrl": "", "image": "assets/images/certs/junior-pt.jpg", "description": "", "sortOrder": 4, "published": true }
+  ]
+}
