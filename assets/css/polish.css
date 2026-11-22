@@ -16,3 +16,10 @@
 @media (max-width:1100px){.hero-grid{gap:50px}.hero-image-wrap{width:min(100%,310px)}}
 @media (max-width:700px){.hero-image-wrap{width:min(72vw,260px);margin-inline:auto;justify-self:center;grid-row:2}.hero-content{grid-row:1}.image-frame{aspect-ratio:3/4;border-radius:20px}.image-frame img{object-position:center 30%}}
 @media (hover:hover) and (pointer:fine){.image-frame{transition:transform 400ms ease,border-color 400ms ease,box-shadow 400ms ease}.image-frame:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 70%,transparent);box-shadow:0 25px 60px rgba(0,0,0,.34)}}
+
+/* CMS-rendered media and repeatable content. */
+.project-image{display:block;width:calc(100% + 50px);height:148px;margin:-25px -25px 20px;object-fit:cover;border-bottom:1px solid var(--border)}
+.company-line{display:flex;align-items:center;gap:10px}.experience-logo{width:34px;height:34px;flex:0 0 auto;object-fit:contain;border:1px solid var(--border);border-radius:7px;background:var(--surface)}
+.education-list{display:grid;gap:16px}.research-articles{padding-left:20px;margin:24px 0 0}.research-articles li+li{margin-top:8px}.research-articles a{color:var(--text);font-weight:700}
+.cert-card-main{display:block;width:100%;min-height:185px;padding:22px;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer}.cert-card-main:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}.cert-credential{display:block;padding:0 22px 19px;color:var(--accent);font-family:"DM Mono",monospace;font-size:.72rem;font-weight:700;text-decoration:none}.cert-credential:hover,.cert-credential:focus-visible{text-decoration:underline}
+.dialog-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:18px}.dialog-gallery img{display:block;width:100%;height:130px;object-fit:cover;border:1px solid var(--border);border-radius:9px}

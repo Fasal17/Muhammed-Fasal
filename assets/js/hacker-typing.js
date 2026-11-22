@@ -22,7 +22,7 @@
     '[OK] XSS: Not detected',
     '[OK] IDOR: Not detected',
     '',
-    'System secure.'
+    'System secure.',
     '',
     'Use Desktop Site.'
   ];

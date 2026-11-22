@@ -1,0 +1,19 @@
+{
+  "fullName": "Muhammed Fasal",
+  "designation": "Cybersecurity Researcher",
+  "heroTitlePrefix": "Muhammed",
+  "heroTitleAccent": "Fasal",
+  "heroSubtitle": "Cybersecurity Researcher | VAPT & Web Application Security",
+  "shortDescription": "Focused on vulnerability assessment, penetration testing, web application security, and security research—with hands-on experience identifying, validating, documenting, and helping remediate security weaknesses.",
+  "profileImage": "assets/images/muhammed-fasal-hero.png",
+  "profileImageAlt": "Muhammed Fasal in a black suit",
+  "location": "Kerala, India",
+  "availability": "Open to cybersecurity opportunities",
+  "professionalHeadline": "Cybersecurity portfolio",
+  "tools": ["Burp Suite", "Nmap", "Wireshark", "Kali Linux", "OWASP", "Python", "Linux"],
+  "socialLinks": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/muhammed-fasal-ms/", "published": true },
+    { "label": "GitHub", "url": "https://github.com/Fasal17", "published": true },
+    { "label": "Bugcrowd", "url": "https://bugcrowd.com/h/Fasal17", "published": true }
+  ]
+}
