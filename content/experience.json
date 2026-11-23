@@ -4,8 +4,64 @@
   "heading": "Relevant professional experience",
   "description": "Security-focused work is presented alongside current IT experience, without overstating either role.",
   "items": [
-    { "id": "iqraa-it-admin", "company": "IQRAA International Hospital & Research Centre", "jobTitle": "Information Technology Administrator", "employmentType": "Full-time", "location": "Kerala, India", "startDate": "Feb 2026", "endDate": "Aug 2026", "current": false, "description": "Supporting IT infrastructure, end users, troubleshooting, and operational system availability in a live organizational environment. This role builds practical familiarity with systems, network environments, and secure operational practices.", "responsibilities": [], "technologies": [], "sortOrder": 1, "published": true },
-    { "id": "encrypt-bytes-intern", "company": "Encrypt Bytes Labs", "jobTitle": "Cyber Security Researcher Intern", "employmentType": "Internship", "location": "", "startDate": "Nov 2025", "endDate": "Jan 2026", "current": false, "description": "", "responsibilities": ["Performed vulnerability assessment and manual web application security testing in authorized environments.", "Applied OWASP Top 10-based testing, application mapping, and vulnerability validation.", "Documented findings with severity assessment, CVSS where applicable, impact, and remediation recommendations.", "Used Burp Suite, Nmap, WhatWeb, SSLScan, and Kali Linux to support security research workflows."], "technologies": ["Burp Suite", "Nmap", "WhatWeb", "SSLScan", "Kali Linux"], "sortOrder": 2, "published": true },
-    { "id": "intrella-dev-intern", "company": "Intrella Technologies and Software Services Pvt. Ltd.", "jobTitle": "Software Development Intern", "employmentType": "Internship", "location": "", "startDate": "Feb 2025", "endDate": "May 2025", "current": false, "description": "Contributed to the development and testing workflow for a Hostel Management System, building experience with application logic, data handling, and delivery practices.", "responsibilities": [], "technologies": [], "sortOrder": 3, "published": true }
+    {
+      "id": "iqraa-it-admin",
+      "company": "IQRAA International Hospital & Research Centre",
+      "jobTitle": "Information Technology Administrator",
+      "employmentType": "Full-time",
+      "location": "Kerala, India",
+      "startDate": "Feb 2026",
+      "endDate": "Aug 2026",
+      "current": false,
+      "companyLogo": "/Muhammed-Fasal/assets/uploads/images/pasted-image-1795395806676.png",
+      "description": "Supporting IT infrastructure, end users, troubleshooting, and operational system availability in a live organizational environment. This role builds practical familiarity with systems, network environments, and secure operational practices.",
+      "responsibilities": [],
+      "technologies": [],
+      "sortOrder": 1,
+      "published": true
+    },
+    {
+      "id": "encrypt-bytes-intern",
+      "company": "Encrypt Bytes Labs",
+      "jobTitle": "Cyber Security Researcher Intern",
+      "employmentType": "Internship",
+      "location": "",
+      "startDate": "Nov 2025",
+      "endDate": "Jan 2026",
+      "current": false,
+      "companyLogo": "",
+      "description": "",
+      "responsibilities": [
+        "Performed vulnerability assessment and manual web application security testing in authorized environments.",
+        "Applied OWASP Top 10-based testing, application mapping, and vulnerability validation.",
+        "Documented findings with severity assessment, CVSS where applicable, impact, and remediation recommendations.",
+        "Used Burp Suite, Nmap, WhatWeb, SSLScan, and Kali Linux to support security research workflows."
+      ],
+      "technologies": [
+        "Burp Suite",
+        "Nmap",
+        "WhatWeb",
+        "SSLScan",
+        "Kali Linux"
+      ],
+      "sortOrder": 2,
+      "published": true
+    },
+    {
+      "id": "intrella-dev-intern",
+      "company": "Intrella Technologies and Software Services Pvt. Ltd.",
+      "jobTitle": "Software Development Intern",
+      "employmentType": "Internship",
+      "location": "",
+      "startDate": "Feb 2025",
+      "endDate": "May 2025",
+      "current": false,
+      "companyLogo": "/Muhammed-Fasal/assets/uploads/images/pasted-image-1795395942745.png",
+      "description": "Contributed to the development and testing workflow for a Hostel Management System, building experience with application logic, data handling, and delivery practices.",
+      "responsibilities": [],
+      "technologies": [],
+      "sortOrder": 3,
+      "published": true
+    }
   ]
 }
